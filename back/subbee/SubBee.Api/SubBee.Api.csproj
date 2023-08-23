@@ -18,4 +18,8 @@
     <ProjectReference Include="..\SubBee.Services\SubBee.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>

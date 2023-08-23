@@ -9,6 +9,15 @@
   <ItemGroup>
     <Folder Include="Login\BO\" />
     <Folder Include="Login\DA\" />
+    <Folder Include="Register\Bo\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SubBee.Models\SubBee.Models.csproj" />
   </ItemGroup>
 
 </Project>
