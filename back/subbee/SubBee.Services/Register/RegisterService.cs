@@ -1,4 +1,4 @@
-﻿using SubBee.Models.ResultModel.Register;
+﻿using SubBee.Models.ResultModel;
 using SubBee.Models.User;
 using SubBee.Services.Login;
 using SubBee.Services.Register.Dal;
@@ -19,7 +19,7 @@ namespace SubBee.Services.Register
             _registerDal = registerDal;
         }
 
-        public RegisterResultModel RegisterUser(UserDto user, CancellationToken cancellationToken)
+        public ResultModel RegisterUser(UserDto user, CancellationToken cancellationToken)
         {
             return _registerDal.RegisterUser(user, cancellationToken);
         }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SubBee.Models.ResultModel.Register
+namespace SubBee.Models.ResultModel
 {
-    public class RegisterResultModel
+    public class ResultModel
     {
         public bool IsSuccess { get; set; }
 

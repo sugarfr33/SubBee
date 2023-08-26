@@ -1,5 +1,5 @@
 ﻿using SubBee.Models.Authentication;
-using SubBee.Models.ResultModel.Register;
+using SubBee.Models.ResultModel;
 using SubBee.Models.User;
 using System;
 using System.Collections.Generic;
@@ -11,25 +11,25 @@ namespace SubBee.Services.Register.Dal
 {
     public class RegisterDal : IRegisterDal
     {
-        public RegisterResultModel RegisterUser(UserDto user, CancellationToken cancellationToken)
+        public ResultModel RegisterUser(UserDto userDto, CancellationToken cancellationToken)
         {
             cancellationToken.ThrowIfCancellationRequested();
 
-            var resultModel = new RegisterResultModel();
+            var resultModel = new ResultModel();
 
-            if (user is null)
+            if (userDto is null)
             {
                 resultModel.IsSuccess = true;
-                resultModel.Message = nameof(user) + " parameter is null";
+                resultModel.Message = nameof(userDto) + " parameter is null";
 
-                return new RegisterResultModel();
+                return new ResultModel();
             }
 
             var userModel = new UserModel();
 
-            var passwordHash = BCrypt.Net.BCrypt.HashPassword(user.Password);
+            var passwordHash = BCrypt.Net.BCrypt.HashPassword(userDto.Password);
 
-            userModel.UserName = user.UserName;
+            userModel.UserName = userDto.UserName;
             userModel.PasswordHash = passwordHash;
 
             resultModel.IsSuccess = true;

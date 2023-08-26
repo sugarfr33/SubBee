@@ -1,7 +1,9 @@
-﻿namespace SubBee.Services.Login
+﻿using SubBee.Models.User;
+
+namespace SubBee.Services.Login
 {
     public interface ILoginService
     {
-        bool Logins();
+        bool Login(UserDto userDto, CancellationToken cancellationToken = default);
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SubBee.Models.User;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace SubBee.Services.Login
 {
     public class LoginService : ILoginService
     {
-        public bool Logins()
+        public bool Login(UserDto userDto, CancellationToken cancellationToken = default)
         {
             return true;
         }
