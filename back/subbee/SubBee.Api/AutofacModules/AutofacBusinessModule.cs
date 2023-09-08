@@ -1,8 +1,9 @@
 ﻿using Autofac;
+using SubBee.Api.Repositories.Abstract;
+using SubBee.Api.Repositories.Domain;
 using SubBee.Services.Login;
 using SubBee.Services.Register;
 using SubBee.Services.Register.Dal;
-using SubBee.Services.Token;
 
 namespace SubBee.Api.AutofacModules
 {
@@ -14,6 +15,7 @@ namespace SubBee.Api.AutofacModules
 
             builder.RegisterType<LoginService>().As<ILoginService>().SingleInstance();
             builder.RegisterType<RegisterService>().As<IRegisterService>().SingleInstance();
+            //builder.RegisterType<TokenService>().As<ITokenService>().SingleInstance();
             builder.RegisterType<TokenService>().As<ITokenService>().SingleInstance();
         }
     }
