@@ -26,7 +26,8 @@ export default {
 
     methods: {
         handleLogin() {
-            alert('test')
+            alert('test');
+            // continuation #4
         },
     },
 }
