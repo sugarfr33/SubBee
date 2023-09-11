@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import Router from './router';
+import './axios';
 
 import GenericButton from './components/Buttons/GenericButton.vue';
 import GenericSubmitButton from './components/Buttons/GenericSubmitButton.vue';

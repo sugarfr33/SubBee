@@ -1,19 +1,33 @@
 <template>
     <div>
         <h3>Login page</h3>
-        <form>
+        <form @submit.prevent="handleLogin">
             <label>Username</label>
-            <GenericTextbox />
+            <input type="text" v-model="username" />
             <label>Password</label>
-            <GenericTextboxPassword />
-            <GenericSubmitButton>Save</GenericSubmitButton>
+            <input type="password" v-model="password" />
+            <button>Login</button>
         </form>
         
     </div>
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
-    name: "LoginPage"
+    name: "LoginPage",
+    data() {
+        return {
+            username: '',
+            password: '',
+        }
+    },
+
+    methods: {
+        handleLogin() {
+            alert('test')
+        },
+    },
 }
 </script>
